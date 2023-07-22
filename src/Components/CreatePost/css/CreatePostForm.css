@@ -1,0 +1,81 @@
+.createPostForm {
+    position: relative;
+    bottom: 3px;
+    margin-bottom: 50px;
+}
+
+.createPostForm__wrapper {
+    background-color: #E7E8F5;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.createPostForm__input {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.createPostForm__input label {
+    flex: 0.12;
+}
+
+.createPostForm__input input {
+    flex: 1;
+    line-height: 2rem;
+    border: 0;
+    border-radius: 4px;
+    outline-width: 0;
+}
+
+.createPostForm__wrapper img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    min-height: 300px;
+    object-fit: contain;
+    background-color: rgba(173, 171, 171, 0.123);
+}
+
+.createPostForm__button  {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.createPostForm__visibility {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.createPostForm__text {
+    margin-top: 10px;
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; 
+    background-color: rgba(173, 171, 171, 0.123);
+    /* % in padding and margin is always based on width */
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

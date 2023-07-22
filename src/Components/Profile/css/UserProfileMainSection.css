@@ -1,0 +1,52 @@
+.userProfile__mainSection {
+    margin-top: 270px;
+    flex: 1;
+}
+
+.mainSection__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSection__header > h1 {
+    font-size: 1.8em;
+}
+
+.userProfile__mainSection h3 {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+
+
+
+.mainSection__aboutMe  p{
+    line-height: 1.7em;
+    white-space: pre-wrap;
+}
+
+.mainSection__friends--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSection__friends--header > button {
+    height: 2.5em;
+    border-radius: 30px;
+    padding: 0 15px;
+    background-color: #1F6CB0;
+    color: white;
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.25);
+}
+
+
+.mainSection__aboutMe p, .mainSection__friends p {
+    font-size: .85em;
+}
+
+.mainSection__friends {
+    margin-top: 100px;
+}

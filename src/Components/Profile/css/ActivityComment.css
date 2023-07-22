@@ -1,0 +1,15 @@
+.activityComment {
+    background-color: white;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    align-self: stretch; 
+    /* required to stretch the comment */
+}
+
+.activityComment p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

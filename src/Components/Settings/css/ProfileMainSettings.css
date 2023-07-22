@@ -1,0 +1,26 @@
+.profileMainSettings img  {
+    height: 120px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.settingsGeneral__fields textarea {
+    height: 20ch;
+    resize: none;
+    padding: 9px 5px;
+    background-color: rgba(128, 128, 128, 0.199);
+    border: none;
+    border-radius: 3px;
+}
+
+.profileMainSettings__preview--aboutMe  {
+    font-size: 0.6rem;
+    width: 70%;
+    align-self: flex-end;
+    white-space: pre-wrap;
+}
+
+.profileMainSettings__preview--aboutMe h6 {
+    font-size: 0.6rem;
+    margin: 0;
+}

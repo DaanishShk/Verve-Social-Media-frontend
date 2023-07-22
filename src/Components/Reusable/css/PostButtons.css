@@ -1,0 +1,30 @@
+.postButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postButtons span {
+    /* position: relative;
+    bottom: 3px; */
+    margin: 0 2px;
+    font-size: .9em;
+}
+
+.postButtons__right span {
+    font-size: 0.9em;
+    /* bottom: 2px; */
+}
+
+
+
+.postButtons__right {
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+
+.postButtons__right--comments {
+    display: flex;
+    align-items: center;
+}

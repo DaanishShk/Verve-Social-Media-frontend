@@ -1,0 +1,65 @@
+.dragDropInput {
+    width: 260px;
+}
+
+.dragDropInput__zone {
+    height: 200px;
+    width: 260px;
+    border:dashed 2px rgba(128, 128, 128, 0.555);
+    background-color: rgba(128, 128, 128, 0.233);
+    text-align: center;
+    color: rgba(128, 128, 128, 0.63);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dragDropInput__header > p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.dragDropInput__zone > p {
+    margin: 0;
+}
+
+.dragDropInput__zone > input {
+    display: none;
+}
+
+.dragDropInput__zone > label {
+    background-color: rgb(240, 240, 240);
+    color: rgba(0, 0, 0, 0.637);
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.212);
+}
+
+.dragDropInput__zone > label:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.dragDropInput > small {
+    font-size: 0.6rem;
+    color: rgb(128, 128, 128);
+    width: 260px;
+}
+
+.dragDropInput__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dragDropInput__header span{
+        color: rgb(255, 255, 255);
+    font-size: 0.7rem;
+    background-color: rgb(31 108 176);
+    line-height: 1.5;
+    border-radius: 4px;
+    padding: 0 1ch;
+}

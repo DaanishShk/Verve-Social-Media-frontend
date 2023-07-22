@@ -1,0 +1,51 @@
+
+
+.settingsGeneral__wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.settingsGeneral__fields {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.settingsGeneral__divider {
+    border-left: solid 1px rgba(0, 0, 0, 0.205);
+}
+
+.settingsGeneral__preview {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.settingsGeneral__preview > h3{
+    margin: 0;
+}
+
+
+.settingsGeneral__fields button {
+    width: fit-content;
+    color:white;
+    background-color: #70A3C4;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+.settingsGeneral__fields button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.settingsGeneral__preview--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin:  50px auto;
+    flex: 0;
+}

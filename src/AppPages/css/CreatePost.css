@@ -1,0 +1,11 @@
+.createPost {
+    max-width: 700px;
+    margin: auto;
+}
+
+.createPost__tabs {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    left: 10px;
+}

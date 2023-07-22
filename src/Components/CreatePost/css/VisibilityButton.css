@@ -1,0 +1,7 @@
+.visibilityButton > button {
+    color: #1F6CB0;
+}
+
+.visibilityButton__active > button{
+    background-color: #d7e8ff;
+}

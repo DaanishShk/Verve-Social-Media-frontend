@@ -1,0 +1,25 @@
+.mainSection__follow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mainSection__follow--icon {
+    position: relative;
+    top: 1px;
+    font-size: 1.5em;
+    color: #aaafb4;
+}
+
+.mainSection__following--icon {
+    position: relative;
+    top: 1px;
+    font-size: 1.5em;
+    color: #1F6CB0;
+}
+
+.mainSection__follow--icon:hover,
+.mainSection__following--icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

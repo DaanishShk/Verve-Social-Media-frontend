@@ -1,0 +1,16 @@
+.pendingRequests {
+    padding-inline: 60px;
+    margin: 30px 0;
+    margin-bottom: 100px;
+}
+
+.pendingRequests__friendRequests {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pendingRequests > h3 {
+    color: #1F6CB0;
+    font-weight: normal;
+}

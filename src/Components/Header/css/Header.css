@@ -1,0 +1,120 @@
+.header {
+  background-color: #1f6cb0;
+  color: white;
+  box-shadow: 0 0 2px 0 px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  position: sticky;
+  /* width: 100vw; */
+  /* was running into some weird issue as width was smaller on certain pages */
+  top: 0;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Might have to make changes here for responsiveness */
+  max-width: 900px;
+  margin: auto;
+  height: 50px;
+}
+
+.header__logoTitle {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.header__logoTitle > h3 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.logoTitle__logo {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+.header__search {
+  background-color: white;
+  height: 60%;
+  border-radius: 10px;
+  display: flex;
+  flex: 0.6;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.search__magnify {
+  color: black;
+  font-size: 1.1em;
+}
+
+.header__search > input {
+  flex: 1;
+  outline-width: 0;
+  border: none;
+}
+
+.header__profilePic {
+  height: 60%;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header__user a {
+  display: flex;
+  align-items: center;
+}
+
+.user__icon {
+  margin-right: 5px;
+  font-size: 1.5em;
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+}
+
+.user__icon:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.541);
+    transition-duration: 0.2s;
+}
+
+.header__user--hover {
+  width: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 5px;
+  border: solid 2px rgba(255, 255, 255, 0.137);
+  background-color: rgb(0 0 0 / 7%);
+  border-radius: 3px;
+}
+
+.header__user--text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.header__user--text span {
+  max-width: 80px;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+}
+
+.header__user--text > :first-child {
+  font-size: 1.3rem;
+  align-self: flex-end;
+  position: relative;
+  top: 1px;
+}
+

@@ -1,0 +1,6 @@
+.friendsAndFollowing__list {
+    margin: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,0 +1,35 @@
+.notificationListItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 55px;
+    align-items: center;
+    border-top: solid 1px rgba(128, 128, 128, 0.24);
+    border-bottom: solid 1px rgba(128, 128, 128, 0.24);
+}
+
+.notificationListItem__time {
+    font-size: 0.7em;
+}
+
+.notificationListItem__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.7;
+}
+
+.notificationListItem__content > img {
+    height: 30px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.notificationListItem__username {
+    border-left: solid 1px rgba(128, 128, 128, 0.24);
+    height: 100%;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}

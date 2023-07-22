@@ -1,0 +1,34 @@
+.profilePostImage > img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, .25);
+}
+
+.profilePost__video {
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 130px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .25)
+}
+
+.profilePost__text {
+    box-sizing: border-box;
+    width: 200px;
+    height: 130px;
+    padding: 10px;
+    font-size: .8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, .25);
+    vertical-align: middle;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}

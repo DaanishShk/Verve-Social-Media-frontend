@@ -1,0 +1,25 @@
+.pinned {
+    background-color: #4E4E6A;
+    border-radius: 15px;
+    width: 240px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+}
+
+.pinned__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.pinned__title > h3 {
+    margin: 12px 3px;
+}
+
+.pinned__posts {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-bottom: 10px;
+}

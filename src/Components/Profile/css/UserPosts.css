@@ -1,0 +1,24 @@
+.userPosts {
+  max-width: 820px;
+  margin: 50px auto;
+  margin-bottom: 100px;
+}
+
+.userPosts__header {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userPosts__header h3 {
+  font-size: 1.5rem;
+
+}
+
+.userPosts__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

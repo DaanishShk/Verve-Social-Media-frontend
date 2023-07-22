@@ -1,0 +1,57 @@
+.userCard {
+  width: 240px;
+  height: fit-content;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+  font-size: 0.9em;
+}
+
+.userCard__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #70a3c4;
+  color: white;
+  padding: 15px;
+}
+
+.userCard__top > h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.userCard__bottom {
+  background-color: #e7e8f5;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  /* gap property is very useful for flexbox */
+}
+
+.userCard__bottom  p {
+  
+  margin: 0;
+}
+
+.userCard__bottom > p {
+    line-height: 1.6em;
+    text-align: center;
+}
+
+.userCard__bottom--stats {
+    display: flex;
+    justify-content:space-between;
+    font-weight: bold;
+}
+
+.userCard__bottom--stats span{
+    color: #1F6CB0;
+    font-weight: normal;
+}
+
+
+
+
+

@@ -1,0 +1,37 @@
+.postCard {
+  grid-row-end: span 30;
+  box-sizing: border-box; /*without this the card was getting no space to expand, hence it was sticking */
+  margin-bottom: 20px;
+  width: 370px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-self: center;
+}
+
+.postCard h5 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+
+.postCard__image {
+  position: relative;
+  right: 10px;
+  width: 370px;
+  object-fit: cover;
+  max-height: 450px;
+}
+
+.postCard__text {
+  font-size: .75rem;
+}
+
+.postCard__video {
+  width: calc(100% + 20px);
+  position: relative;
+  right: 10px;
+}

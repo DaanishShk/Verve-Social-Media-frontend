@@ -1,0 +1,62 @@
+import { AuthContext } from "../Auth/AuthContext";
+import { useContext } from "react";
+
+function useFetch() {
+
+    const {baseUrl, user, setIsAuth} = useContext(AuthContext);
+
+    async function callEndpoint(
+      endpoint,
+      method,
+      body,
+      contentType
+    ) {
+      console.log(
+        `Fetching from endpoing ${endpoint} with method ${method} and body `,
+        body
+      );
+      // console.log(`Authorization: Bearer ${user.token}`);
+
+      let header = {Authorization: `Bearer ${user.token}`,}
+      if(contentType) header["Content-Type"]=contentType;
+
+      let obj = {
+        method: method || "GET",
+        headers: header,
+        mode: "cors", // without this cannot send anything other than plain text,
+        // JSON deserialization error was being caused because of lack of stringify here
+      };
+
+      if(body) obj.body = body
+      
+      let status;
+      
+      try {
+        let res = await fetch(baseUrl + endpoint, obj);
+
+        // if(!res.ok) {
+        //     setUser(false);
+        //     return;
+        // }
+        
+        status = res.status;
+        console.log(status)
+        // may have to revisit this for optimization
+        res = await res.json();
+        // if(res.token) {
+        //   localStorage.clear()
+        //   sessionStorage.clear()
+        //   setIsAuth(false);
+        // }
+        console.log(res)
+        return { res, status};
+      } catch (error) {
+        console.log(error);
+        return { status };  // similar changes made above
+      }
+    }
+   
+    return callEndpoint;
+}
+
+export default useFetch;

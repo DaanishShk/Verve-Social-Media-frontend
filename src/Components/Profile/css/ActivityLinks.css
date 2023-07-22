@@ -1,0 +1,33 @@
+.userCard__bottom--links {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fdfdfd;
+    gap: 15px;
+    padding: 8px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: rgb(67 67 87);
+}
+
+.userCard__bottom--icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: .8;
+    gap: 5px;
+    font-size: 2em;
+}
+
+.userCard__bottom--icons > :hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.userCard__bottom--icons a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    /* flex removed extra space that a tag added */
+}

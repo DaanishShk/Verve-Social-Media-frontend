@@ -1,0 +1,24 @@
+.loadingSpinner {
+    width: fit-content;
+    margin: auto;
+    height: 400px;
+    line-height: 400px;
+    font-size: 4rem;
+    color: #1f6cb0;
+}
+
+.loadingSpinner > :first-child {
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }  
+}

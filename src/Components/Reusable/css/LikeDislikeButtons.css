@@ -1,0 +1,33 @@
+.postButtons__left {
+    display: flex;
+    gap: 5px;
+}
+
+.postButtons__like,
+.postButtons__dislike {
+    display: flex;
+    align-items: center;
+}
+
+.postButtons__like {
+    color: #F24E1E;
+}
+
+.postButtons__dislike {
+    color: rgb(42 56 255 / 51%);
+}
+
+.likeDislikeButtons span {
+    margin: 0 2px;
+    font-size: .9em;
+}
+
+.likeDislikeButton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+} 
+
+.likeDislikeButton__inactive {
+    color: rgba(128, 128, 128, 0.507);
+}
+

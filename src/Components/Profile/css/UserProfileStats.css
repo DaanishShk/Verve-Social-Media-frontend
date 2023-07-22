@@ -1,0 +1,27 @@
+.userProfileStats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.userProfileStats__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.userProfileStats__item--text :first-child {
+    font-weight: bold;
+}
+
+.userProfileStats__item--text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.userProfileStats__item--text :nth-child(2) {
+    font-size: .8rem;
+}

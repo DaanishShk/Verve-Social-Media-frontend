@@ -1,0 +1,17 @@
+.notifications {
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.notifications__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}

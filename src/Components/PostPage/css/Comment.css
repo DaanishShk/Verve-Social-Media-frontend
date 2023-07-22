@@ -1,0 +1,30 @@
+.comment {
+    display: flex;
+    gap: 10px;  
+}
+
+.comment__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.comment__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment__wrapper p {
+    margin: 0;
+    font-size: .85rem;
+}
+
+.comment__wrapper > :first-child {
+    color: #1F6CB0;
+    font-weight: bold;
+}
+
+.comment__wrapper > :first-child span {
+    font-weight: normal;
+}

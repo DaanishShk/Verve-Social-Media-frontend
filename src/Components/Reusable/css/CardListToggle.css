@@ -1,0 +1,27 @@
+.cardListToggle {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+
+.cardListToggle__icon {
+    margin: 5px 0px;
+    font-size: 1.2rem;
+    color: #1f6cb0;
+    background-color: rgba(128, 128, 128, 0.171);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+
+.cardListToggle__icon--active {
+    background-color: #d7e8ff;
+}
+
+.cardListToggle__icon:hover {
+    opacity: .8;
+    cursor: pointer;
+}

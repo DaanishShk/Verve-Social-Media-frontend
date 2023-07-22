@@ -1,0 +1,76 @@
+.settingsSidebar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    background-color: #e2eef9;
+    max-width: 800px;
+    margin: auto;
+    /* padding-top: 20px; */
+    height: fit-content; 
+    border-radius: 0 0 3px 3px;
+       /* was not working without height */
+    border: solid 1px rgba(0, 0, 0, 0.082);
+}
+
+.settingsSidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #1F6CB0;
+  gap: 5px;
+  width: 200px;
+  align-self: stretch;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+
+.settingsSidebar__header > h2 {
+    margin: 10px 0;
+    letter-spacing: .15rem;
+    font-size: 2rem;
+    z-index: 50;
+}
+
+.settingsSidebar__header--icon {
+    transform: scale(5)  translateX(-7px) rotate(0deg);
+    color: #0e0e0e0e;
+}
+
+.settingsSidebar__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsSidebar__section > h4 {
+    color: #4d4d4d;
+    letter-spacing: .25rem;
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.settingsSidebar__section  button {
+    font-size: .9rem;
+    letter-spacing: .05rem;
+    background-color: transparent;
+    border: none;
+    padding: 8px 10px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    width: 120px;
+    border-radius: 2px;
+}
+
+
+.settingsSidebar__section  button:hover {
+    transition-duration: 50ms;
+    background-color: #bbdbffa6;
+    cursor: pointer;
+}

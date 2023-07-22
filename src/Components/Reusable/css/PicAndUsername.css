@@ -1,0 +1,8 @@
+.picAndUsername {
+    color: #1F6CB0;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: .8em;
+}

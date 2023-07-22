@@ -1,0 +1,14 @@
+.mainSection__friends--header button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.mainSection__friends--pics {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.mainSection__friends--pics img{
+    margin-left: -10px;
+}

@@ -1,0 +1,21 @@
+.postListItem {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #E7E8F5;
+    border-radius: 10px;
+    height: 115px;
+    width: 100%;
+    max-width: 800px;
+    /* margin: 0 30px; */
+}
+
+.postListItem__info {
+    padding-right: 15px;
+    flex: 1;
+}
+
+.postListItem__info h5 {
+    margin: 12px 0;
+    font-weight: normal;
+}

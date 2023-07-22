@@ -1,0 +1,18 @@
+.cardSettings__links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardSettings__linkContainer {
+    display: flex;
+    gap: 7px;
+    align-items: flex-end;
+}
+
+.cardSettings__linkContainer > :nth-child(2) {
+    font-size: 1.8rem;
+    color: #4E4E6A;
+    position: relative;
+    bottom: 5px;
+}

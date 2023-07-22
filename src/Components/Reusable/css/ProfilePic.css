@@ -1,0 +1,20 @@
+/* object fit require image to have defined dimensions */
+.profilePic {
+  display: flex;
+  align-items: center;
+}
+
+.profilePic > img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 1px #E7E8F5;
+  background-color: rgba(128, 128, 128, 0.144);
+}
+
+.profilePic--clickable:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition-duration: 0.2s;
+}

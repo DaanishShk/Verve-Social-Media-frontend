@@ -95,7 +95,7 @@ function LoginCard() {
           className={"loginCard__input"}
         />
         <LoginInput
-          type="text"
+          type="password"
           field="Password"
           value={password}
           setValue={setPassword}

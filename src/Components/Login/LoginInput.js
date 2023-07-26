@@ -13,7 +13,7 @@ function LoginInput({type, field, value, setValue, maxLength=20, error, info, cl
 
         <input
           type={type}
-          id={type}
+          id={`${type} ${field}`}
           value={value}
           onChange={(e) => setValue(e.target.value.trim())}
           maxLength={maxLength}

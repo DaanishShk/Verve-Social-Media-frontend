@@ -72,8 +72,15 @@ function SignupCardSecurity({ username, email }) {
         </div>
       </div>
 
-      <LoginInput
+      <input
         type="text"
+        id="username"
+        value={username}
+        style={{ display: "none" }}
+      />
+
+      <LoginInput
+        type="password"
         field="Password"
         value={password}
         setValue={(val) => setPassword(val.trim())}
@@ -84,7 +91,7 @@ function SignupCardSecurity({ username, email }) {
         }
       />
       <LoginInput
-        type="text"
+        type="password"
         field="Confirm Password"
         value={confirmPassword}
         setValue={setConfirmPassword}

@@ -30,12 +30,9 @@ function Feed() {
       undefined,
       "x-www-form-urlencoded"
     );
-    console.log(res);
     setPosts(res);
     setLoading(false);
   }
-
-  console.log(sort);
 
   return (
     <div className="feed">

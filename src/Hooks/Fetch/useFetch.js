@@ -5,11 +5,10 @@ function useFetch() {
   const { baseUrl, user, setIsAuth } = useContext(AuthContext);
 
   async function callEndpoint(endpoint, method, body, contentType) {
-    console.log(
-      `Fetching from endpoing ${endpoint} with method ${method} and body `,
-      body
-    );
-    // console.log(`Authorization: Bearer ${user.token}`);
+    // console.log(
+    //   `Fetching from endpoing ${endpoint} with method ${method} and body `,
+    //   body
+    // );
 
     let header = { Authorization: `Bearer ${user.token}` };
     if (contentType) header["Content-Type"] = contentType;
@@ -44,7 +43,6 @@ function useFetch() {
         return { status };
       }
 
-      console.log(res);
       return { res, status };
     } catch (error) {
       console.log(error);

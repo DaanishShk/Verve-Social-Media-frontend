@@ -80,8 +80,6 @@ function LoginCard() {
         setDisabledError("Account is not activated");
       }
     }
-
-    console.log("rerendering login")
     
     return (
       <div className="loginCard">

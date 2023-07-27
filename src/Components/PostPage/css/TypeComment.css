@@ -31,3 +31,8 @@
     opacity: .8;
     cursor: pointer;
 }
+
+.typeComment button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

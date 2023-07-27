@@ -10,3 +10,8 @@
     opacity: 0.8;
     cursor: pointer;
 }
+
+.createPostButton>button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

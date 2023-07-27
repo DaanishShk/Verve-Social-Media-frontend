@@ -45,7 +45,7 @@ function TypeComment({ comments, setComments, postId }) {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       ></textarea>
-      <button onClick={submitHandle}>
+      <button onClick={submitHandle} disabled={content.length === 0? true: false}>
         <RiSendPlaneFill />
       </button>
     </div>

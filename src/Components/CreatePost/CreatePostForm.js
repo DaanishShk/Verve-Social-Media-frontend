@@ -62,6 +62,7 @@ function CreatePostForm({ tab }) {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            maxLength={100}
           />
         </div>
         {tab === "Image" || tab === "Link" ? (

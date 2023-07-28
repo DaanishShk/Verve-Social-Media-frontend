@@ -2,14 +2,28 @@ import "./css/PostPage.css";
 
 import Comment from "./Comment";
 import PostButtons from "../Reusable/PostButtons";
-import React from "react";
+import React, { useEffect } from "react";
 import Time from "../Reusable/Time";
 import TypeComment from "./TypeComment";
 import UserCard from "../Profile/UserCard";
 import { useState } from "react";
+import SortBy from "../Reusable/SortBy";
 
 function PostPage({ post, profile, baseUrl }) {
   const [comments, setComments] = useState(post.comments);
+  const [sort, setSort] = useState("timestamp");
+
+  useEffect(() => {
+    console.log(sort)
+    const arr = [...comments]
+    if (sort === "timestamp") {
+      arr.sort((c1, c2) => new Date(c2.timestamp) - new Date(c1.timestamp))
+    } else {
+      arr.sort((c1, c2) => c2.countVotes[sort] - c1.countVotes[sort]);
+    }
+    console.log(arr)
+    setComments(arr)
+  }, [sort]);
 
   return (
     <div className="postPage">
@@ -58,7 +72,10 @@ function PostPage({ post, profile, baseUrl }) {
         </div>
 
         <div className="postPage__comments">
-          <h3 style={{ margin: "0", color: "#4E4E6A" }}>Comments</h3>
+          <div className="postPage__comments--header">
+            <h3 style={{ margin: "0", color: "#4E4E6A" }}>Comments</h3>
+            <SortBy setSort={setSort} noCommentsOption={true} />
+          </div>
           <TypeComment
             comments={comments}
             setComments={setComments}

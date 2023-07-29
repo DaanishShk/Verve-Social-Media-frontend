@@ -56,6 +56,7 @@ function FriendRequest({
               <ProfilePic
                 size="30px"
                 imgUrl={`${baseUrl}/images/${friend.username}/profilepic`}
+                username={friend.username}
                 key={friend.id}
               />
             ))}

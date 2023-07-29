@@ -4,13 +4,12 @@ import Comment from '../PostPage/Comment';
 import { Link } from "react-router-dom";
 import React from 'react'
 
-function ActivityComment({profilePicUrl, displayName, username, content, postId}) {
-
+function ActivityComment({profilePicUrl, displayName, username, content, postId, isClickable=true}) {
   // add / or else will get relative address
     return (
       <div className="activityComment">
         <Link
-          to={`/post/${postId}`}
+          to={isClickable? `/post/${postId}`: '#'}
           style={{ textDecoration: "none", color: "black" }}
         >
             <Comment

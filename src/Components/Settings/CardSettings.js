@@ -134,7 +134,8 @@ function CardSettings() {
                     },
                     postId: 0,
                     id: 0,
-                    content: "Sample comment, do not click",
+                    content: "Sample comment as seen on profile page",
+                    isClickable: false,
                   },
                 ]}
                 links={links}

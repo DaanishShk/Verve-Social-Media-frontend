@@ -25,6 +25,7 @@ function Activity({ activityComments, links }) {
             content={comment.content}
             postId={comment.postId}
             key={comment.id}
+            isClickable={comment.isClickable}
           />
         ))}
         <ActivityLinks links={links} />

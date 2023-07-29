@@ -12,3 +12,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* verve font */
+.header h3, .logoName h3 {
+  font-family: 'Carter One', sans-serif;
+} 
+
+/* page title, sub titles */
+h1, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* post title on cards, name on profile */
+h2, h5, h6 {
+  font-family: 'Rambla', sans-serif;
+  font-weight: 300;
+}
+
+.picAndUsername > span {
+  font-family: 'Rambla', sans-serif;
+  font-weight: 600;
+}
+
+.time span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  /* color: rgba(0, 0, 0, 0.765) */
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+label {
+  font-family: 'Work sans', sans-serif;
+  font-weight: 400;
+}
+
+small {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+}
+
+select {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+input, textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+li {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+/* font-family: 'Athiti', sans-serif;
+font-family: 'Borel', cursive;
+font-family: 'Carter One', cursive;
+font-family: 'Heebo', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'League Spartan', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Rambla', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Work Sans', sans-serif; */

@@ -6,6 +6,7 @@ import LikeDislikeButtons from "./LikeDislikeButtons";
 import React from "react";
 import { BiWorld } from "react-icons/bi";
 import { BsPeopleFill } from "react-icons/bs";
+import SharePost from "./SharePost";
 
 function PostButtons({
   size,
@@ -29,7 +30,8 @@ function PostButtons({
           <span>{commentsLength}</span>
           <IoChatbubblesOutline />
         </div>
-        <IoShareSocialOutline />
+        {/* <IoShareSocialOutline /> */}
+        <SharePost />
         <div className="postButtons__right--visibility">
           {visibility === "PUBLIC" ? <BiWorld /> : <BsPeopleFill />}
         </div>

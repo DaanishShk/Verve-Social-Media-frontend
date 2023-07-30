@@ -8,6 +8,7 @@ import FeedPosts from "../Components/Feed/FeedPosts";
 import LoadingSpinner from "../Components/Reusable/LoadingSpinner";
 import React from "react";
 import useFetch from "../Hooks/Fetch/useFetch";
+import CreatePostButton from "../Components/Reusable/CreatePostButton";
 
 function Feed() {
   const callEndpoint = useFetch(AuthContext);
@@ -17,6 +18,7 @@ function Feed() {
   const [refresh, setRefresh] = useState(false);
   const [view, setView] = useState("card");
   const [sort, setSort] = useState("timestamp");
+  const [limit, setLimit] = useState(5);
 
   useEffect(() => {
     setLoading(true);
@@ -51,7 +53,16 @@ function Feed() {
           {!posts.length ? (
             <p style={{ textAlign: "center" }}>No posts</p>
           ) : null}
-          <FeedPosts posts={posts} view={view} />
+          <FeedPosts posts={posts.slice(0, limit)} view={view} />
+          <div className="createPostButton">
+            <button
+              onClick={() => setLimit(limit + 5)}
+              disabled={posts.length < limit}
+              style={{ display: 'block', margin: "auto" }}
+            >
+              Load more
+            </button>
+          </div>
         </>
       ) : (
         <LoadingSpinner />

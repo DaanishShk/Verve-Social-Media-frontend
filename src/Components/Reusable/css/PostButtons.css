@@ -28,3 +28,8 @@
     display: flex;
     align-items: center;
 }
+
+.postButtons__right--visibility {
+    line-height: 100%;
+    text-align: center;
+}

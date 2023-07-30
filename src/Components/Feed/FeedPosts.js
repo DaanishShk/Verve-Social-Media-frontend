@@ -27,6 +27,7 @@ function FeedPosts({ posts, view }) {
               userVoteType={post.userVoteType}
               timestamp={post.timestamp}
               key={post.id}
+              visibility={post.visibility}
             />
           ))
         : posts.map((post) => (

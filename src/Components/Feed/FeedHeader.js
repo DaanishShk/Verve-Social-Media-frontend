@@ -18,13 +18,13 @@ function FeedHeader({tab, setTab, refresh, setRefresh, view, setView, setSort}) 
           onClick={() => setRefresh(!refresh)}
         />
         <PageNavButton
-          Icon={BsFillPersonPlusFill}
+          Icon={BsFillPeopleFill}
           text="Friends"
           setTab={setTab}
           active={tab === "Friends" ? true : false}
         />
         <PageNavButton
-          Icon={BsFillPeopleFill}
+          Icon={BsFillPersonPlusFill}
           text="Following"
           setTab={setTab}
           active={tab === "Following" ? true : false}

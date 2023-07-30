@@ -20,6 +20,7 @@ function PostCard({
   userVoteType,
   entityId,
   timestamp,
+  visibility:postVisibility
 }) {
   const [span, setSpan] = useState(20);
   const [visibility, setVisibility] = useState("hidden");
@@ -86,6 +87,7 @@ function PostCard({
         userVoteType={userVoteType}
         entityId={entityId}
         entityType={"posts"}
+        visibility={postVisibility}
       />
     </div>
   );

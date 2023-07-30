@@ -42,6 +42,7 @@ function PostListItem({post, profilePicUrl, timestamp}) {
             userVoteType={post.userVoteType}
             entityType={"posts"}
             entityId={post.id}
+            visibility={post.visibility}
           />
         </div>
       </div>

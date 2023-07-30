@@ -68,6 +68,7 @@ function PostPage({ post, profile, baseUrl }) {
             userVoteType={post.userVoteType}
             entityType="posts"
             entityId={post.id}
+            visibility={post.visibility}
           />
         </div>
 

@@ -8,6 +8,7 @@ import TypeComment from "./TypeComment";
 import UserCard from "../Profile/UserCard";
 import { useState } from "react";
 import SortBy from "../Reusable/SortBy";
+import PostEdit from "./PostEdit";
 
 function PostPage({ post, profile, baseUrl }) {
   const [comments, setComments] = useState(post.comments);
@@ -97,14 +98,17 @@ function PostPage({ post, profile, baseUrl }) {
           ))}
         </div>
       </div>
-      <UserCard
-        description={profile.description}
-        imgUrl={`${baseUrl}/images/${profile.account.username}/profilepic`}
-        displayName={profile.account.displayName}
-        username={profile.account.username}
-        numberFollowers={profile.numberFollowers}
-        numberFollowing={profile.numberFollowing}
-      />
+      <div className="postPage__side">
+        <UserCard
+          description={profile.description}
+          imgUrl={`${baseUrl}/images/${profile.account.username}/profilepic`}
+          displayName={profile.account.displayName}
+          username={profile.account.username}
+          numberFollowers={profile.numberFollowers}
+          numberFollowing={profile.numberFollowing}
+        />
+        <PostEdit username={profile.account.username} postId={post.id} />
+      </div>
     </div>
   );
 }

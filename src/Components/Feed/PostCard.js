@@ -6,6 +6,7 @@ import PostHeader from "../Reusable/PostHeader";
 import React from "react";
 import TextPost from "./TextPost";
 import { useState } from "react";
+import YoutubePlaceholder from "../Reusable/YoutubePlaceholder";
 
 function PostCard({
   content,
@@ -20,7 +21,7 @@ function PostCard({
   userVoteType,
   entityId,
   timestamp,
-  visibility:postVisibility
+  visibility: postVisibility,
 }) {
   const [span, setSpan] = useState(20);
   const [visibility, setVisibility] = useState("hidden");
@@ -58,7 +59,9 @@ function PostCard({
             onLoad={handleLoad}
             onError={handleLoad}
           />
-        ) : type === "VIDEO" ? (
+        ) : type === "VIDEO" && /youtube.com/.test(content) ? (
+          <YoutubePlaceholder videoUrl={content} handleLoad={handleLoad} />
+        ) : type === "VIDEO" && /gfycat.com/.test(content) ? (
           <div
             className="video postCard__video"
             style={{ paddingBottom: `calc(56.25% ${videoStyle})` }}

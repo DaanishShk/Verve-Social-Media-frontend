@@ -6,7 +6,7 @@ import React, { useRef, useState } from "react";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsReddit } from "react-icons/bs";
 
-function SharePost() {
+function SharePost({ postId }) {
   const [iconHover, setIconHover] = useState(false);
   const [dropHover, setDropHover] = useState(false);
   const [open, setOpen] = useState(false);
@@ -40,14 +40,14 @@ function SharePost() {
           onMouseLeave={() => setDropHover(false)}
         >
           <a
-            href={`https://twitter.com`}
+            href={`https://twitter.com/intent/tweet?url=https://${window.location.hostname}/posts/${postId}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <AiOutlineTwitter />
           </a>
           <a
-            href={`https://www.reddit.com`}
+            href={`https://www.reddit.com/submit?url=https://${window.location.hostname}/posts/${postId}`}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -31,7 +31,7 @@ function PostButtons({
           <IoChatbubblesOutline />
         </div>
         {/* <IoShareSocialOutline /> */}
-        <SharePost />
+        <SharePost postId={entityId}/>
         <div className="postButtons__right--visibility">
           {visibility === "PUBLIC" ? <BiWorld /> : <BsPeopleFill />}
         </div>

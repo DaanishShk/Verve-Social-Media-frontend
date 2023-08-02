@@ -1,16 +1,20 @@
-import './index.css';
+import "./index.css";
 import "font-awesome/css/font-awesome.min.css";
 
-import App from './App';
-import {Auth} from './Hooks/Auth/AuthContext';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import { Auth } from "./Hooks/Auth/AuthContext";
+import React from "react";
+import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./AppPages/ErrorFallback";
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
         <App />
+      </ErrorBoundary>
     </Auth>
   </React.StrictMode>,
   document.getElementById("root")

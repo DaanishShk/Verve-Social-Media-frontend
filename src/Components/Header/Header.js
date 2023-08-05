@@ -15,6 +15,7 @@ import {IoIosArrowDown} from "react-icons/io"
 import {IoNewspaper} from "react-icons/io5"
 import {Link} from "react-router-dom"
 import ProfilePic from "../Reusable/ProfilePic";
+import { BiBell } from "react-icons/bi";
 
 // Faced some problems with icon styling and classnames
 // Used wrapper for header centering
@@ -65,6 +66,9 @@ function Header() {
           </Link>
           <Link to="/">
             <IoNewspaper className="user__icon" />
+          </Link>
+          <Link to="/notifications">
+            <BiBell className="user__icon" />
           </Link>
           <Link to="/relations">
             <BsFillPeopleFill className="user__icon" />

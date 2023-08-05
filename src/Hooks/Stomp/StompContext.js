@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useRef, useState } from "react";
 
 import { AuthContext } from "../Auth/AuthContext";
 import SockJS from "sockjs-client";
@@ -8,27 +8,33 @@ import { useContext } from "react";
 const StompContext = createContext();
 
 function StompClient({ children }) {
-  const { baseUrl } = useContext(AuthContext);
-  var stompClient = null;
+  const { baseUrl, user } = useContext(AuthContext);
 
-  var socket = new SockJS(`${baseUrl}/stomp-endpoint`);
-  stompClient = Stomp.over(socket);
-  stompClient.connect({}, function (frame) {
-    console.log("Connected: " + frame);
-    stompClient.subscribe(`${baseUrl}/topic/greetings`, function (greeting) {
-      JSON.parse(greeting.body);
+  const stompClient = useRef(
+    Stomp.over(new SockJS(`${baseUrl}/stomp-endpoint`))
+  );
+
+  useEffect(() => {
+    stompClient.current.connect({}, function (frame) {
+      console.log("Connected: " + frame);
+      stompClient.current.subscribe(
+        `/user/${user.account.username}/notifications`,
+        function (greeting) {
+          JSON.parse(greeting.body);
+        }
+      );
     });
-  });
+  }, []);
 
   window.onbeforeunload = function () {
-    if (stompClient !== null) {
-      stompClient.disconnect();
+    if (stompClient.current !== null) {
+      stompClient.current.disconnect();
     }
     console.log("Disconnected");
   };
 
   function sendName() {
-    stompClient.send(
+    stompClient.current.send(
       "/app/hello",
       {},
       JSON.stringify({ name: "Jason Romario" })

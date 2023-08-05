@@ -4,21 +4,21 @@ import PicAndUsername from "../Reusable/PicAndUsername";
 import React from 'react'
 import Time from "../Reusable/Time";
 
-function NotificationListItem({timestamp, message, displayName, imgUrl, profilePictureUrl}) {
+function NotificationListItem({timestamp, message, username, displayName, imgUrl, profilePictureUrl}) {
     return (
       <div className="notificationListItem">
         <div className="notificationListItem__time">
-          <Time />
+          <Time timestamp={timestamp}/>
         </div>
         <div className="notificationListItem__content">
-          <h5>Jason tagged you recently</h5>
+          <h5>{message}</h5>
           <img
-            src="https://images.unsplash.com/photo-1638365448598-8fb987e93be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+            src={imgUrl}
             alt=""
           />
         </div>
         <div className="notificationListItem__username">
-          <PicAndUsername />
+          <PicAndUsername displayName={displayName} imgUrl={profilePictureUrl} username={username}/>
         </div>
       </div>
     );

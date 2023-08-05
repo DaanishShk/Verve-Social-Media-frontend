@@ -8,12 +8,15 @@ import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./AppPages/ErrorFallback";
+import { StompClient } from "./Hooks/Stomp/StompContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <App />
+        <StompClient>
+          <App />
+        </StompClient>
       </ErrorBoundary>
     </Auth>
   </React.StrictMode>,

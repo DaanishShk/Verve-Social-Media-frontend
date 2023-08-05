@@ -12,6 +12,7 @@ import Post from "./AppPages/Post";
 import Profile from "./AppPages/Profile";
 import Relations from "./AppPages/Relations";
 import Settings from "./AppPages/Settings";
+import Notifications from "./AppPages/Notifications";
 
 function App() {
   // / in route means from base address, not relative
@@ -30,7 +31,7 @@ function App() {
               <Route path="/:username" element={<Profile />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/createpost" element={<CreatePost />} />
-              {/* <Route path="/notifications" element={<Notifications />} /> */}
+              <Route path="/notifications" element={<Notifications />} />
               <Route path="/relations" element={<Relations />} />
               <Route path="/post/:id" element={<Post />} />
               <Route path="/settings/*" element={<Settings />} />

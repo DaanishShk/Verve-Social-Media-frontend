@@ -25,6 +25,7 @@ function Notifications() {
       undefined,
       "application/JSON"
     );
+    console.log(res)
     setNotifications(res);
     setLoading(false);
   }
@@ -49,11 +50,9 @@ function Notifications() {
                 displayName={n.messageAccount.displayName}
                 post={n.post}
                 type={n.type}
+                key={n.id}
               />
             ))}
-            <NotificationListItem />
-            <NotificationListItem />
-            <NotificationListItem />
           </div>
         </>
       ) : (

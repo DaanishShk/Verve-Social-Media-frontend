@@ -15,14 +15,14 @@ function PostPage({ post, profile, baseUrl }) {
   const [sort, setSort] = useState("timestamp");
 
   useEffect(() => {
-    console.log(sort)
+    // console.log(sort)
     const arr = [...comments]
     if (sort === "timestamp") {
       arr.sort((c1, c2) => new Date(c2.timestamp) - new Date(c1.timestamp))
     } else {
       arr.sort((c1, c2) => c2.countVotes[sort] - c1.countVotes[sort]);
     }
-    console.log(arr)
+    // console.log(arr)
     setComments(arr)
   }, [sort]);
 

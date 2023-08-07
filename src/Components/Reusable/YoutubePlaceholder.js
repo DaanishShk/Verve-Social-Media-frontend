@@ -1,7 +1,6 @@
 import "./css/YoutubePlaceholder.css";
 
 function YoutubePlaceholder({ videoUrl, handleLoad }) {
-  console.log(videoUrl);
   return (
     <div className="youtubePlaceholder">
       <img

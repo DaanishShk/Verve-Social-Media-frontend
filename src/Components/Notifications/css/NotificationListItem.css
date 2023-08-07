@@ -19,9 +19,9 @@
     flex: 0.7;
 }
 
-.notificationListItem__content > img {
-    height: 30px;
-    width: 40px;
+.notificationListItem__content img {
+    height: 40px;
+    width: 50px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -32,4 +32,14 @@
     padding-left: 15px;
     display: flex;
     align-items: center;
+    width: 165px;
+}
+
+.notificationListItem__content .profilePost__text {
+    box-sizing: border-box;
+    width: 50px;
+    height: 40px;
+    font-size: .4rem;
+    border-radius: 5px;
+    padding: 3px;
 }

@@ -15,16 +15,17 @@ function StompClient({ children }) {
   );
 
   useEffect(() => {
+    if (user == null) return;
     stompClient.current.connect({}, function (frame) {
       console.log("Connected: " + frame);
       stompClient.current.subscribe(
         `/user/${user.account.username}/notifications`,
-        function (greeting) {
-          JSON.parse(greeting.body);
+        function (message) {
+          console.log(message);
         }
       );
     });
-  }, []);
+  }, [user]);
 
   window.onbeforeunload = function () {
     if (stompClient.current !== null) {

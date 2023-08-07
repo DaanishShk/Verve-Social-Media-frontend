@@ -1,23 +1,66 @@
 import "./css/Notifications.css";
 
 import NotificationListItem from "../Components/Notifications/NotificationListItem";
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import SortBy from "../Components/Reusable/SortBy";
+import useFetch from "../Hooks/Fetch/useFetch";
+import { AuthContext } from "../Hooks/Auth/AuthContext";
+import LoadingSpinner from "../Components/Reusable/LoadingSpinner";
 
 function Notifications() {
-    return (
-      <div className="notifications">
-        <div className="notifications__header">
-          <h1>Notifications</h1>
-          <SortBy />
-        </div>
-        <div className="notifications__list">
-            <NotificationListItem />
-            <NotificationListItem />
-            <NotificationListItem />
-        </div>
-      </div>
+  const callEndpoint = useFetch(AuthContext);
+  const [loading, setLoading] = useState(true);
+  const [notifications, setNotifications] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    getNotifications();
+  }, [refresh]);
+
+  async function getNotifications() {
+    const { res } = await callEndpoint(
+      `/notifications`,
+      "GET",
+      undefined,
+      "application/JSON"
     );
+    setNotifications(res);
+    setLoading(false);
+  }
+
+  return (
+    <div className="notifications">
+      <div className="notifications__header">
+        <h1>Notifications</h1>
+        <SortBy />
+      </div>
+      {!loading ? (
+        <>
+          {!notifications.length ? (
+            <p style={{ textAlign: "center" }}>No notifications</p>
+          ) : null}
+          <div className="notifications__list">
+            {notifications.map((n) => (
+              <NotificationListItem
+                timestamp={n.timestamp}
+                message={n.message}
+                username={n.messageAccount.username}
+                displayName={n.messageAccount.displayName}
+                post={n.post}
+                type={n.type}
+              />
+            ))}
+            <NotificationListItem />
+            <NotificationListItem />
+            <NotificationListItem />
+          </div>
+        </>
+      ) : (
+        <LoadingSpinner />
+      )}
+    </div>
+  );
 }
 
-export default Notifications
+export default Notifications;

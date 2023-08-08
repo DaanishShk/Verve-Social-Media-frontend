@@ -9,6 +9,7 @@ const StompContext = createContext();
 
 function StompClient({ children }) {
   const { baseUrl, user } = useContext(AuthContext);
+  const [ newMessage, setNewMessage ] = useState(false);
 
   const stompClient = useRef(
     Stomp.over(new SockJS(`${baseUrl}/stomp-endpoint`))
@@ -22,6 +23,7 @@ function StompClient({ children }) {
         `/user/${user.account.username}/notifications`,
         function (message) {
           console.log(message);
+          setNewMessage(true);
         }
       );
     });
@@ -34,16 +36,16 @@ function StompClient({ children }) {
     console.log("Disconnected");
   };
 
-  function sendName() {
-    stompClient.current.send(
-      "/app/hello",
-      {},
-      JSON.stringify({ name: "Jason Romario" })
-    );
-  }
+  // function sendName() {
+  //   stompClient.current.send(
+  //     "/app/hello",
+  //     {},
+  //     JSON.stringify({ name: "Jason Romario" })
+  //   );
+  // }
 
   return (
-    <StompContext.Provider value={{ sendName }}>
+    <StompContext.Provider value={{ newMessage, setNewMessage }}>
       {children}
     </StompContext.Provider>
   );

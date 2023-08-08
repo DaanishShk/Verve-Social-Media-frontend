@@ -1,50 +1,46 @@
-import "./css/Header.css"
+import "./css/Header.css";
 
-import {
-  AiFillRedditCircle,
-  AiOutlinePlusCircle,
-} from "react-icons/ai";
-import React, { useContext, useRef, useState } from "react"
+import { AiFillRedditCircle, AiOutlinePlusCircle } from "react-icons/ai";
+import React, { useContext, useRef, useState } from "react";
 
 import { AuthContext } from "../../Hooks/Auth/AuthContext";
-import {
-  BsFillPeopleFill,
-} from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs";
 import HeaderDropdown from "./HeaderDropdown";
-import {IoIosArrowDown} from "react-icons/io"
-import {IoNewspaper} from "react-icons/io5"
-import {Link} from "react-router-dom"
+import { IoIosArrowDown } from "react-icons/io";
+import { IoNewspaper } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import ProfilePic from "../Reusable/ProfilePic";
-import { BiBell } from "react-icons/bi";
+import { BiBell, BiSolidBellRing } from "react-icons/bi";
+import { StompContext } from "../../Hooks/Stomp/StompContext";
 
 // Faced some problems with icon styling and classnames
 // Used wrapper for header centering
 // Profile pic prop for sizing not added
 
 function Header() {
-
   const [picHover, setPicHover] = useState(false);
   const [dropHover, setDropHover] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const {baseUrl, user} = useContext(AuthContext)
-  
+  const { baseUrl, user } = useContext(AuthContext);
+  const { newMessage, setNewMessage } = useContext(StompContext);
+
   // look closely at how the timeout problem was handled, timeoutId might be different on rerender but because of closure it works
   const timeoutId = useRef(null);
-  
+
   const picHoverHandle = () => {
-    setPicHover(true)
-    if(timeoutId.current) {
+    setPicHover(true);
+    if (timeoutId.current) {
       clearTimeout(timeoutId.current);
       timeoutId.current = null;
-    } 
+    }
   };
-  
+
   const picOutHandle = () => {
     timeoutId.current = setTimeout(() => setPicHover(false), 100);
-  }
+  };
 
-
-  // console.log(timeoutId); 
+  // console.log(timeoutId);
   return (
     <div className="header">
       <div className="header__wrapper">
@@ -67,13 +63,19 @@ function Header() {
           <Link to="/">
             <IoNewspaper className="user__icon" />
           </Link>
-          <Link to="/notifications">
-            <BiBell className="user__icon" />
-          </Link>
+          {newMessage ? (
+            <Link to="/notifications" onClick={() => setNewMessage(false)}>
+              <BiSolidBellRing className="user__icon" />
+            </Link>
+          ) : (
+            <Link to="/notifications">
+              <BiBell className="user__icon" />
+            </Link>
+          )}
           <Link to="/relations">
             <BsFillPeopleFill className="user__icon" />
           </Link>
-          {picHover || dropHover ? (
+          {picHover || dropHover || open ? (
             <div
               className="header__user--drop"
               onMouseEnter={() => setDropHover(true)}
@@ -86,6 +88,7 @@ function Header() {
             className="header__user--hover"
             onMouseOver={picHoverHandle}
             onMouseOut={picOutHandle}
+            onClick={() => setOpen(!open)}
           >
             <div className="header__user--text">
               <IoIosArrowDown />

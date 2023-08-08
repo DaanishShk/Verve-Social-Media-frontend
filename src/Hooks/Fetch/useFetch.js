@@ -2,7 +2,7 @@ import { AuthContext } from "../Auth/AuthContext";
 import { useContext } from "react";
 
 function useFetch() {
-  const { baseUrl, user, setIsAuth } = useContext(AuthContext);
+  const { baseUrl, user, setIsAuth } = useContext(AuthContext);   // since the function is called within the children of authContext, no need to pass explicitly
 
   async function callEndpoint(endpoint, method, body, contentType) {
     // console.log(

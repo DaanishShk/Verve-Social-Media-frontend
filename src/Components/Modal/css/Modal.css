@@ -1,0 +1,55 @@
+.modal {
+  position: fixed;
+  inset: 0; /* inset sets all 4 values (top right bottom left) much like how we set padding, margin etc., */
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 999;
+  padding: 40px 20px 20px;
+}
+
+.modal__container {
+  background-color: #fff;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 420px;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.modal__content {
+  display: flex;
+  gap: 1.8rem;
+  padding: 0.7rem 2rem;
+}
+
+.modal__content p,
+.modal__content h3 {
+  margin: 0;
+}
+
+.modal__container--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.modal__container .modal__buttons {
+  flex-direction: row;
+}
+
+.modal__buttons {
+  background-color: rgba(217, 217, 217, 0.43);
+}
+
+.modal__buttons > .modal__buttons--remove {
+  border: solid 2px #f24e1e;
+  background-color: white;
+  color: #f24e1e;
+}

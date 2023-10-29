@@ -2,26 +2,33 @@ import "./css/PostEdit.css";
 
 import { AiFillStar } from "react-icons/ai";
 import { AuthContext } from "../../Hooks/Auth/AuthContext";
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { FiPenTool } from "react-icons/fi";
 import useFetch from "../../Hooks/Fetch/useFetch";
+import { useNavigate } from "react-router-dom";
+import Modal from "../Modal/ModalDelete";
 
 function PostEdit({ username, postId }) {
   const { user } = useContext(AuthContext);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const callEndpoint = useFetch();
+  const navigate = useNavigate();
 
   async function handleDelete(requestState) {
-      const { res, status } = await callEndpoint(
-      `/posts/${postId}`,
-      "DELETE",
-      null,
-      "application/json"
-      );
-      console.log(res);
-      if (status === 202) {
-        //   do something here
-      }
+    const { res, status } = await callEndpoint(
+    `/posts/${postId}`,
+    "DELETE",
+    null,
+    "application/json"
+    );
+    console.log(res);
+    if (status !== 202) {
+      //   do something here
+      throw Error("Encountered a problem!");
+    }
+    navigate(`/${username}`);
+    setShowDeleteModal(false);
   }
 
   return (
@@ -42,12 +49,18 @@ function PostEdit({ username, postId }) {
               </button>
               <button
                 className="friendRequest__buttons--reject"
-                onClick={handleDelete}
+                onClick={() => setShowDeleteModal(true)}
               >
                 DELETE
               </button>
             </div>
           </div>
+          {showDeleteModal ? (
+            <Modal
+              handleDelete={handleDelete}
+              handleClose={setShowDeleteModal}
+            />
+          ) : null}
         </div>
       ) : null}
     </>

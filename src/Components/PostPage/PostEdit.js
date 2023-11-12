@@ -17,10 +17,10 @@ function PostEdit({ username, postId }) {
 
   async function handleDelete(requestState) {
     const { res, status } = await callEndpoint(
-    `/posts/${postId}`,
-    "DELETE",
-    null,
-    "application/json"
+      `/posts/${postId}`,
+      "DELETE",
+      null,
+      "application/json"
     );
     console.log(res);
     if (status !== 202) {
@@ -33,7 +33,8 @@ function PostEdit({ username, postId }) {
 
   return (
     <>
-      {user.account.username === username ? (
+      {user.account.username === username ||
+      user.account.authorities[0].authority === "ROLE_ADMIN" ? (
         <div className="postEdit">
           <div className="pinned__title" style={{ color: "#1f6cb0" }}>
             <FiPenTool className="pinned__title--icon" />

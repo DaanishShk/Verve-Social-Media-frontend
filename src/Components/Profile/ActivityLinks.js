@@ -19,7 +19,7 @@ function ActivityLinks({links}) {
           <div className="userCard__bottom--icons">
             {links["REDDIT"] ? (
               <a
-                href={`https://www.reddit.com${links["REDDIT"]}`}
+                href={`https://www.reddit.com/${links["REDDIT"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -28,7 +28,7 @@ function ActivityLinks({links}) {
             ) : null}
             {links["YOUTUBE"] ? (
               <a
-                href={`https://www.youtube.com${links["YOUTUBE"]}`}
+                href={`https://www.youtube.com/${links["YOUTUBE"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -37,7 +37,7 @@ function ActivityLinks({links}) {
             ) : null}
             {links["TWITTER"] ? (
               <a
-                href={`https://twitter.com${links["TWITTER"]}`}
+                href={`https://twitter.com/${links["TWITTER"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -46,7 +46,7 @@ function ActivityLinks({links}) {
             ) : null}
             {links["INSTAGRAM"] ? (
               <a
-                href={`https://www.instagram.com${links["INSTAGRAM"]}`}
+                href={`https://www.instagram.com/${links["INSTAGRAM"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -55,7 +55,7 @@ function ActivityLinks({links}) {
             ) : null}
             {links["DISCORD"] ? (
               <a
-                href={`https://discord.com${links["DISCORD"]}`}
+                href={`https://discord.com/${links["DISCORD"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -64,7 +64,7 @@ function ActivityLinks({links}) {
             ) : null}
             {links["PINTEREST"] ? (
               <a
-                href={`https://www.pinterest.com${links["PINTEREST"]}`}
+                href={`https://www.pinterest.com/${links["PINTEREST"]}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

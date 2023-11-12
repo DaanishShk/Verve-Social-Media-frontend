@@ -18,7 +18,7 @@ function Feed() {
   const [refresh, setRefresh] = useState(false);
   const [view, setView] = useState("card");
   const [sort, setSort] = useState("timestamp");
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(10);
 
   useEffect(() => {
     setLoading(true);

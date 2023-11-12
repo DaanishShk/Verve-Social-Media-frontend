@@ -1,7 +1,7 @@
 .pendingRequests {
-    padding-inline: 60px;
-    margin: 30px 0;
-    margin-bottom: 100px;
+    padding-inline: 15px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .pendingRequests__friendRequests {
@@ -13,4 +13,5 @@
 .pendingRequests > h3 {
     color: #1F6CB0;
     font-weight: normal;
+    margin-top: 0;
 }

@@ -9,7 +9,7 @@
 .feedHeader__left {
     display: flex;
     align-items: center;
-    gap: 3px
+    gap: 0.4em;
 }
 
 .feedHeader__refresh:hover {

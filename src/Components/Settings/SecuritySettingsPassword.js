@@ -65,14 +65,14 @@ function SecuritySettingsPassword({securitySettingsHandle}) {
           <div className="securitySettings__group">
             <SettingsInput
               name="New password"
-              type="text"
+              type="password"
               value={newPassword}
               setValue={setNewPassword}
               error={newPasswordError}
             />
             <SettingsInput
               name="Confirm password"
-              type="text"
+              type="password"
               instruction=""
               value={confirmPassword}
               setValue={setConfirmPassword}
@@ -82,7 +82,7 @@ function SecuritySettingsPassword({securitySettingsHandle}) {
           <div className="securitySettings__group">
             <SettingsInput
               name="Current password"
-              type="text"
+              type="password"
               instruction="* To confirm changes, please enter your password"
               value={password}
               setValue={setPassword}

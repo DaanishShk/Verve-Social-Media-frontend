@@ -28,7 +28,9 @@ function Activity({ activityComments, links }) {
             isClickable={comment.isClickable}
           />
         ))}
-        <ActivityLinks links={links} />
+        {Object.keys(links).length !== 0 ? (
+          <ActivityLinks links={links} />
+        ) : null}
       </div>
     </div>
   );

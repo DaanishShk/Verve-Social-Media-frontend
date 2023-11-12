@@ -1,6 +1,7 @@
 .notifications {
   max-width: 800px;
-  margin: 10px auto;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .notifications__header {

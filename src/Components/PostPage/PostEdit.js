@@ -41,12 +41,12 @@ function PostEdit({ username, postId }) {
           </div>
           <div className="pinned__posts">
             <div className="friendRequest__buttons postEdit__buttons">
-              <button
+              {/* <button
                 className="friendRequest__buttons--accept"
                 onClick={() => null}
               >
                 EDIT
-              </button>
+              </button> */}
               <button
                 className="friendRequest__buttons--reject"
                 onClick={() => setShowDeleteModal(true)}

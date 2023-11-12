@@ -8,7 +8,7 @@ import FriendsAndFollowingHeader from "./FriendsAndFollowingHeader";
 import FriendsAndFollowingListItem from "./FriendsAndFollowingListItem";
 import useFetch from "../../Hooks/Fetch/useFetch";
 
-function FriendsAndFollowing() {
+function FriendsAndFollowing({ refresh }) {
   const { baseUrl } = useContext(AuthContext);
   const callEndpoint = useFetch(AuthContext);
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ function FriendsAndFollowing() {
   useEffect(() => {
     setLoading(true);
     getPosts();
-  }, [tab]);
+  }, [tab, refresh]);
 
   async function getPosts() {
     const { res } = await callEndpoint(
@@ -45,7 +45,7 @@ function FriendsAndFollowing() {
             username={account.username}
             account={account}
             tab={tab}
-            key={account.id}
+            key={account.id + '-' + tab}
           />
         ))}
       </div>

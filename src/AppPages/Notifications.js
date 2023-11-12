@@ -6,12 +6,14 @@ import SortBy from "../Components/Reusable/SortBy";
 import useFetch from "../Hooks/Fetch/useFetch";
 import { AuthContext } from "../Hooks/Auth/AuthContext";
 import LoadingSpinner from "../Components/Reusable/LoadingSpinner";
+import { BiRefresh } from "react-icons/bi";
 
 function Notifications() {
   const callEndpoint = useFetch(AuthContext);
   const [loading, setLoading] = useState(true);
   const [notifications, setNotifications] = useState([]);
   const [refresh, setRefresh] = useState(false);
+  const [limit, setLimit] = useState(10);
 
   useEffect(() => {
     setLoading(true);
@@ -25,7 +27,7 @@ function Notifications() {
       undefined,
       "application/JSON"
     );
-    console.log(res)
+    console.log(res);
     setNotifications(res);
     setLoading(false);
   }
@@ -34,7 +36,12 @@ function Notifications() {
     <div className="notifications">
       <div className="notifications__header">
         <h1>Notifications</h1>
-        <SortBy />
+        {/* <SortBy /> */}
+        <BiRefresh
+          style={{ fontSize: "2em", color: "#1F6CB0" }}
+          className="feedHeader__refresh"
+          onClick={() => setRefresh(!refresh)}
+        />
       </div>
       {!loading ? (
         <>
@@ -42,7 +49,7 @@ function Notifications() {
             <p style={{ textAlign: "center" }}>No notifications</p>
           ) : null}
           <div className="notifications__list">
-            {notifications.map((n) => (
+            {notifications.slice(0, limit).map((n) => (
               <NotificationListItem
                 timestamp={n.timestamp}
                 message={n.message}
@@ -53,6 +60,15 @@ function Notifications() {
                 key={n.id}
               />
             ))}
+            <div className="createPostButton">
+              <button
+                onClick={() => setLimit(limit + 5)}
+                disabled={notifications.length < limit}
+                style={{ display: "block", margin: "auto" }}
+              >
+                Load more
+              </button>
+            </div>
           </div>
         </>
       ) : (

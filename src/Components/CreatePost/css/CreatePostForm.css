@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 .createPostForm__input {
@@ -25,11 +26,13 @@
 }
 
 .createPostForm__input input {
-    flex: 1;
-    line-height: 2rem;
+    flex: 1 1;
+    line-height: 2.5em;
     border: 0;
     border-radius: 4px;
-    outline-width: 0;
+    /* outline-width: 0; */
+    font-size: 1em;
+    padding: 0.2em 0.5em;
 }
 
 .createPostForm__wrapper img {
@@ -61,6 +64,8 @@
     height: 300px;
     box-sizing: border-box;
     border-radius: 4px;
+    padding: 0.5em;
+    font-size: 1em;
 }
 
 .video {

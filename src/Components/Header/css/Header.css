@@ -1,7 +1,7 @@
 .header {
   background-color: #1f6cb0;
   color: white;
-  box-shadow: 0 0 2px 0 px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
   z-index: 100;
   position: sticky;
   /* width: 100vw; */

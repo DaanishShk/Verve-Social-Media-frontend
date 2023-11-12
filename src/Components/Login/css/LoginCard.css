@@ -1,60 +1,63 @@
 .loginCard {
-    background-color: #70A3C4;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
-    padding: 10px 25px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: first baseline; */
-    gap: 12px;
-    height: 360px;
+  background-color: #70a2c4e1;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.25);
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: max-content;
+  background-color: linear-gradient(
+    15deg,
+    rgb(31 108 176 / 70%) 0%,
+    rgb(112 163 196) 80%
+  );
 }
 
 .loginCard h1 {
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 5px;
+  color: white;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  letter-spacing: 0.05em;
 }
 
-
-
 .loginCard__rememberMe {
-    margin-top:5px;
-    color: white;
-    font-size: .9em;
+  margin-top: 5px;
+  color: white;
+  font-size: 0.9em;
 }
 
 .loginCard__rememberMe > input {
-    transform: scale(1.4);
-    position: relative;
-    top: 1px;
-    margin-right: 7px;
+  transform: scale(1.4);
+  position: relative;
+  top: 1px;
+  margin-right: 7px;
 }
 
 .loginCard > button {
-    margin: 10px 0;
-    font-size: 1.4em;
-    background-color: #1F6CB0;
-    color: white;
-    border: none;
-    padding: 6px 0;
-    border-radius: 50px;
+  margin: 10px 0;
+  font-size: 1.4em;
+  background-color: #1f6cb0;
+  color: white;
+  border: none;
+  padding: 6px 0;
+  border-radius: 50px;
 }
 
 .loginCard > button:hover {
-    opacity: 0.8;
-    cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .loginCard > p {
-    margin: 0;
-    text-align: center;
-    font-size: 0.9em;
-    position: relative;
-    bottom: 5px;
+  margin: 0;
+  text-align: center;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 5px;
 }
 
 .loginCard__nav {
-    color: #1F6CB0;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }

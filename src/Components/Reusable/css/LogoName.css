@@ -1,8 +1,10 @@
 .logoName {
   display: flex;
   align-items: center;
-  margin: 0.5em 0;
-  color: #1F6CB0;
+  color: #1f6cb0;
+  padding: 0.2em 0.5em;
+  background: #ffffff6e;
+  border-radius: 15px;
 }
 
 .logoName > h3 {
@@ -13,5 +15,5 @@
 
 .logoName__logo {
   font-size: 5em;
-  color: #4E4E6A
+  color: #4e4e6a;
 }

@@ -8,9 +8,11 @@
 
 .loginCard__input > input {
     margin-top: 5px;
-    line-height: 2em;
+    line-height: 2.5em;
     border: none;
     border-radius: 3px;
+    font-size: 1em;
+    padding: 0.2em 0.5em;
 }
 
 .loginCard__input--active {

@@ -1,23 +1,23 @@
 .profilePostImage > img {
-    width: 200px;
-    height: 130px;
+    width: 220px;
+    height: 155px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, .25);
 }
 
 .profilePost__video {
-    width: 200px;
+    width: 220px;
     border-radius: 10px;
     overflow: hidden;
-    padding-bottom: 130px;
+    padding-bottom: 155px;
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .25)
 }
 
 .profilePost__text {
     box-sizing: border-box;
-    width: 200px;
-    height: 130px;
+    width: 220px;
+    height: 155px;
     padding: 10px;
     font-size: .8rem;
     text-overflow: ellipsis;

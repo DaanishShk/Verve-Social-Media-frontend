@@ -8,7 +8,7 @@ import FriendRequest from "./FriendRequest";
 import LoadingSpinner from "../Reusable/LoadingSpinner";
 import useFetch from "../../Hooks/Fetch/useFetch";
 
-function PendingRequests() {
+function PendingRequests({refresh}) {
   const { baseUrl } = useContext(AuthContext);
   const callEndpoint = useFetch(AuthContext);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ function PendingRequests() {
   useEffect(() => {
     setLoading(true);
     getFriendRequests();
-  }, []);
+  }, [refresh]);
 
   async function getFriendRequests() {
     const { res } = await callEndpoint(
@@ -37,6 +37,9 @@ function PendingRequests() {
         <>
           <h3>Pending requests ({requests.length})</h3>
           <div className="pendingRequests__friendRequests">
+            {!requests.length ? (
+              <p style={{ textAlign: "center" }}>No requests</p>
+            ) : null}
             {requests.map((request) => (
               <FriendRequest
                 imgUrl={`${baseUrl}/images/${request.friendRequest.sender.username}/profilepic`}

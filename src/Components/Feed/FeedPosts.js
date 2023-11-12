@@ -59,4 +59,5 @@ const styleList = {
   flexDirection: "column",
   gap: "40px",
   alignItems: "center",
+  margin: "30px 0"
 };

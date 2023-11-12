@@ -103,7 +103,7 @@ function SecuritySettingsBasic({ account, securitySettingsHandle }) {
         <div className="securitySettings__group">
           <SettingsInput
             name="Current password"
-            type="text"
+            type="password"
             instruction="* To confirm changes, please enter your password"
             value={password}
             setValue={setPassword}

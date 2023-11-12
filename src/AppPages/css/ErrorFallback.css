@@ -1,0 +1,37 @@
+.errorFallback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./low-poly-grid-haikei.svg');
+    height: 100vh;
+    text-align: center;
+}
+
+.errorFallback__wrapper {
+    background-color: rgb(255 255 255 / 60%);
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.errorFallback h1 {
+    margin-top: 0;
+}
+
+.errorFallback p {
+    /* color: white; */
+    font-weight: 400;
+}
+
+.errorFallback button {
+    font-size:  larger;
+    padding: 0.5em 5em;
+    border-radius: 10px;
+    color: white;
+    background-color: #4483b9;
+}
+
+.errorFallback button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}

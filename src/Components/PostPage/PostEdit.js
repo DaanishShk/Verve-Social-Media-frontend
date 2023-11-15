@@ -34,7 +34,7 @@ function PostEdit({ username, postId }) {
   return (
     <>
       {user.account.username === username ||
-      user.account.authorities[0].authority === "ROLE_ADMIN" ? (
+      user.account.role === "ROLE_ADMIN" ? (
         <div className="postEdit">
           <div className="pinned__title" style={{ color: "#1f6cb0" }}>
             <FiPenTool className="pinned__title--icon" />

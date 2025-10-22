@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Verve - Social Media (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Verve is a full-stack social media application combining a Spring backend and a React frontend to support text/image/video posts, friends & followers, comments, reactions, user tagging, achievements, and notifications.
 
-## Available Scripts
+[![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)](#)
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](#)
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](#)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](#)
+[![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](#)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](#)
+[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](#)
+[![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](#)
 
-In the project directory, you can run:
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Verve frontend delivers a responsive UI for creating and consuming text, image and video posts while managing social connections and real-time engagement. Key capabilities include content creation with tagging, threaded reactions, achievements, configurable profile/settings, a mixed personal/public activity feed, and notifications. The frontend syncs with a backend API.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Typical flows:
+- Account & profile: create and manage accounts, sign in/out, edit profile details and privacy, and view personal post/comment history.  
+- Connections: discover users, send/accept/decline friend requests, follow or unfollow others to shape what appears in the personal feed.  
+- Content: compose posts with text, images or video, mention/tag users, attach media, and edit or remove your own posts; post views show comment and reaction counts.  
+- Engagement: react with likes/dislikes, reply in comments section, share content on other media platforms, and receive notifications for mentions and replies.  
+- Feed & history: a personalized feed that mixes friends/followers and public posts.  
+- Achievements & notifications: receive achievement notifications and view friend requests, mentions, reactions and system alerts with the notifications system.
 
-### `npm test`
+The application was first deployed on AWS then moved to Azure. Currently there is no active demo version deployed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The following technologies were used for development:
+1. [Spring](https://spring.io/) - Java backend framework
+2. [React](https://reactjs.org/) - component-based UI library
+3. [Figma](https://www.figma.com/) - design & prototyping
+4. [Postman](https://www.postman.com/) - API testing tool
+5. [PostgreSQL](https://www.postgresql.org/) - relational database
+6. [Docker](https://www.docker.com/) - containerization platform
+7. [Nginx](https://www.nginx.com/) - web server & reverse proxy
+8. [Azure](https://azure.microsoft.com/) - cloud hosting & services
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
+For building and running the application you need:
 
-### `npm run eject`
+- [Node 16](https://www.python.org/downloads/release/python-3114/) or higher
+- [Docker](https://www.docker.com/)
+- [Java 18](https://www.java.com/en/) or higher
+- [Postgresql](https://www.postgresql.org/) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Running the application locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone this repo and run the following npm commands to get a UI build ready for the docker container.
+```
+npm install
+npm run build
+```
+Next, clone the [backend repo](https://github.com/DaanishShk/Verve-Social-Media-backend) and run the following command.
+```
+mvn compile
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Create a frontend_build directory in the root folder of the backend repo. Copy the UI build and its Dockerfile to this folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In the backend repo directory, open the terminal and run the following command
+```shell
+docker-compose up
+```
+The UI should be accessible at localhost:80.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Daanish Shaikh - [@github](https://github.com/DaanishShk)\
+repo link - [Verve-Social-Media-Frontend](https://github.com/DaanishShk/Verve-Social-Media-frontend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.

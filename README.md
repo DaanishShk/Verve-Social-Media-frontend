@@ -26,7 +26,12 @@ Typical flows:
 
 The application was first deployed on AWS then moved to Azure. Currently there is no active demo version deployed.
 
-
+## Screenshots
+<img height="325" alt="image" src="https://github.com/user-attachments/assets/d1c2e5fa-379e-4739-b0d7-1ae7a81cf780" />
+<img height="325" alt="image" src="https://github.com/user-attachments/assets/1784c83e-3f12-4e48-b2cc-7b5bff1e0946" />
+<img height="325" alt="image" src="https://github.com/user-attachments/assets/2520e78f-c64a-4810-be48-2d5a1a4020a2" />
+<img height="325" alt="image" src="https://github.com/user-attachments/assets/2dd69147-8659-4142-bf1a-1e07825a0bf6" />
+<img height="325"  alt="image" src="https://github.com/user-attachments/assets/ab6b8429-715e-423d-a2dd-de9d73bd8c4d" />
 
 ## Built with
 
